@@ -1,13 +1,104 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  font-family: "Montserrat", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Handle */
+::-webkit-scrollbar-track {
+  background: #0a192f; 
+}
+::-webkit-scrollbar-thumb {
+  background: #237d797f; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #04ecec; 
+} 
+
+
+
+
+/* Reset all margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Include padding and borders in element’s width and height */
+}
+
+/* Ensure body and html take full height and width */
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Ensure your root container is full width */
+.container {
+  width: 100%;
+  max-width: 100%; /* Prevents the container from going beyond 100% width */
+  margin: 0 auto;  /* Center container horizontally */
+  padding: 0;      /* Ensure no padding issues */
+}
+
+i{
+  cursor:pointer;
+}
+i:hover{
+  color:whitesmoke;
+  font-size:x-large;
+}
+/* Custom gradient for the spinning circle */
+.border-t-gradient {
+  border-top-color: transparent;
+  background: conic-gradient(
+    from 0deg,
+    #ffbf70, /* Start color */
+    #ffffff, /* Middle color */
+    #584be0  /* End color */
+  );
+}
+
+/* Add a glowing effect around the circle */
+.glow {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8), 0 0 30px rgba(83, 84, 84, 0.6);
+}
+
+.s, .n, .g {
+  animation: pulse 1.5s infinite alternate;
+}
+
+/* Keyframes for the pulse effect on text */
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+}
+
+.s {
+  animation-delay: 0s;
+}
+
+.n {
+  animation-delay: 0.2s;
+}
+
+.g {
+  animation-delay: 0.4s;
 }
