@@ -50,5 +50,5 @@
     "ajv": "^7.2.4",
     "tailwindcss": "^3.4.10"
   },
-  "proxy": "http://localhost:5000/"
+  "proxy": "https://backend-mocha-delta-75.vercel.app/"
 }
