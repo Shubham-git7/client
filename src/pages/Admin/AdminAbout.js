@@ -19,7 +19,7 @@ const Adminabout = () => {
       values.skills = tempSkills;
 
       dispatch(showLoading());
-      const response = await axios.post("/api/portfolio/update-about", {
+      const response = await axios.post("https://server-portfolio-sfdo.onrender.com/api/portfolio/update-about", {
         ...values,
         _id: portfolioData.about._id,
       });
