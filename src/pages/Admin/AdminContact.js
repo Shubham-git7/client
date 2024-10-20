@@ -16,7 +16,7 @@ const AdminContact = () => {
   const onFinish = async (values) => {
     try {
       dispatch(showLoading());
-      const response = await axios.post("/api/portfolio/update-contact", {
+      const response = await axios.post("https://server-portfolio-sfdo.onrender.com/api/portfolio/update-contact", {
         ...values,
         _id: portfolioData.Contact._id,
       });
