@@ -13,7 +13,7 @@ function Login() {
   const login = async() => {
     try {
         dispatch(showLoading);
-        const response = await axios.post('/api/portfolio/admin-login', user);
+        const response = await axios.post('https://server-portfolio-sfdo.onrender.com/api/portfolio/admin-login', user);
         dispatch(hideLoading());
         if(response.data.success){
             message.success(response.data.message);
