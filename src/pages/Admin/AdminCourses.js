@@ -21,12 +21,12 @@ const AdminCourses = () => {
       // console.log("Values to be sent:", values);
 
       if (selectedItemForEdit) {
-        response = await axios.post("/api/portfolio/update-course", {
+        response = await axios.post("https://server-portfolio-sfdo.onrender.com/api/portfolio/update-course", {
           ...values,
           _id: selectedItemForEdit._id,
         });
       } else {
-        response = await axios.post("/api/portfolio/add-course", values);
+        response = await axios.post("https://server-portfolio-sfdo.onrender.com/api/portfolio/add-course", values);
       }
 
       dispatch(hideLoading());
